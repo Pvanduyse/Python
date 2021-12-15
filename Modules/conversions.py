@@ -127,3 +127,10 @@ ft_m = lambda X: X/3.2808
 
 km_mi = lambda X: CHAIN_CONV(X, (km_m,m_ft,ft_mi))
 mi_km = lambda X: CHAIN_CONV(X, (mi_ft,ft_m,m_km))
+
+C_K = lambda X: X+273.15
+K_C = lambda X: X-273.15
+C_F = lambda X: X*9/5 + 32
+F_C = lambda X: (X - 32) * 5/9
+K_F = lambda X: CHAIN_CONV(X, (K_C,C_F))
+F_K = lambda X: CHAIN_CONV(X, (F_C,C_K))

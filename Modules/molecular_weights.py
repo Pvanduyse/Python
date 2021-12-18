@@ -2,7 +2,7 @@ import csv
 import numpy
 
 # Import values
-ifile = open("/mnt/c/Users/patri/Documents/Python/Modules/molecular_weights.csv","r")
+ifile = open("../Modules/molecular_weights.csv","r")
 csv_reader = csv.reader(ifile)
 by_symbol = {}
 by_name = {}

@@ -32,3 +32,5 @@ def by_formula(FORMULA):
         else:
             ELEMENT = ELEMENT + CHAR
     return RESULT + (COUNT if COUNT > 0 else 1) * by_symbol[ELEMENT]
+
+by_formula = numpy.vectorize(by_formula)

@@ -34,3 +34,9 @@ def by_formula(FORMULA):
     return RESULT + (COUNT if COUNT > 0 else 1) * by_symbol[ELEMENT]
 
 by_formula = numpy.vectorize(by_formula)
+
+def from_mole_frac(FORMULAS, MOLE_FRAC):
+    return numpy.sum(MOLE_FRAC*by_formula(FORMULAS))
+
+def from_mass_frac(FORMULAS, MASS_FRAC):
+    return 1/numpy.sum(MASS_FRAC/by_formula(FORMULAS))

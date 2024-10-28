@@ -1,0 +1,3 @@
+[submodule "myengineerpkg"]
+	path = myengineerpkg
+	url = git@github.com:Pvanduyse/myengineerpkg.git
